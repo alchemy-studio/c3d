@@ -1,6 +1,19 @@
 # c3d
 this project implements action recognition algorithm proposed in [C3D: Generic Features for Video Analysis](https://arxiv.org/pdf/1412.0767v1.pdf) with esimator of Tensorflow
 
+## prerequisite tools
+
+install prerequisite tools with the following cmds
+
+```bash
+echo "deb [arch=amd64] http://storage.googleapis.com/tensorflow-serving-apt stable tensorflow-model-server tensorflow-model-server-universal" | sudo tee /etc/apt/sources.list.d/tensorflow-serving.list && \
+	curl https://storage.googleapis.com/tensorflow-serving-apt/tensorflow-serving.release.pub.gpg | sudo apt-key add -
+
+sudo apt update
+sudo apt install python3-opencv tensorflow-model-server
+pip3 install numpy tensorflow requests
+```
+
 ### Introduction
 
 c3d is a convolutional neural network classifying sports video clips. it is widely used as an infrastructure of latter action recognition neural networks.
